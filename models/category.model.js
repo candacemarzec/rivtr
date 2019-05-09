@@ -8,4 +8,4 @@ let categorySchema = new Schema({
 });
 
 // I believe this line establishes the connection to the server.js file. Checking syntax.
-module.exports = mongoose.model('Category', categorySchema);
+module.exports = mongoose.model('category', categorySchema);

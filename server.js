@@ -17,28 +17,13 @@ connection.once('open', function() {
 
 
 // Routes
-require('./routes/category.route')(app);
+const category = require('./routes/category.route');
+app.use('/categories', category);
 
 // let categorySchema = require('./models/category.model');
 
-// const categoryRoutes = require('./routes/category.route');
-// app.use('/categories', categoryRoutes);
-
-
-
 // Controllers
-const categoryController = require('./controllers/category.controller');
-
-// categoryRoutes.route('/').get(function(req, res) {
-//   categorySchema.find(function(err, categories) {
-//     if (err) {
-//       console.log(err);
-//     } else {
-//       res.json("Hello!");
-//     }
-//   });
-// });
-
+// const categoryController = require('./controllers/category.controller');
 
 
 app.listen(PORT, function() {

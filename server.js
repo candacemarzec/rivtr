@@ -16,20 +16,28 @@ connection.once('open', function() {
 });
 
 
-let categorySchema = require('./models/category.model');
+// Routes
+require('./routes/category.route')(app);
 
-const categoryRoutes = express.Router();
-app.use('/categories', categoryRoutes);
+// let categorySchema = require('./models/category.model');
 
-categoryRoutes.route('/').get(function(req, res) {
-  categorySchema.find(function(err, categories) {
-    if (err) {
-      console.log(err);
-    } else {
-      res.json('Greetings from the test controller');
-    }
-  });
-});
+// const categoryRoutes = require('./routes/category.route');
+// app.use('/categories', categoryRoutes);
+
+
+
+// Controllers
+const categoryController = require('./controllers/category.controller');
+
+// categoryRoutes.route('/').get(function(req, res) {
+//   categorySchema.find(function(err, categories) {
+//     if (err) {
+//       console.log(err);
+//     } else {
+//       res.json("Hello!");
+//     }
+//   });
+// });
 
 
 

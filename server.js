@@ -17,8 +17,8 @@ connection.once('open', function() {
 
 
 // Routes
-const category = require('./routes/category.route');
-app.use('/categories', category);
+const categoryList = require('./routes/category.route');
+app.use('/categories', categoryList);
 
 // let categorySchema = require('./models/category.model');
 

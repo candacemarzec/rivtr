@@ -6,7 +6,7 @@ const categoryController = require('../controllers/category.controller');
 
 
 
-router.get('/', categoryController.categories);
+router.get('/', categoryController.category_list);
 module.exports = router; 
 
 // module.exports = function(app) {

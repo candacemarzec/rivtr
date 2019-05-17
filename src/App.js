@@ -15,10 +15,10 @@ class App extends Component {
               <ul className="navbar-nav mr-auto">
               <li className="nav-item">
                   <Link to={'/'} className="nav-link">Home</Link>
-                </li>
-                <li className="nav-item">
+              </li>
+              <li className="nav-item">
                   <Link to={'/index'} className="nav-link">Categories</Link>
-                </li>
+              </li>
               </ul>
             </div>
           </nav> <br/>
